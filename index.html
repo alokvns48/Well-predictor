@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Well Prediction</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <h1>Well Prediction App</h1>
+</header>
+<main>
+    <div class="form-container">
+        <section class="location-form">
+            <h2>Enter Location</h2>
+            <label for="latitude">Latitude (X-coordinate):</label>
+            <input type="text" id="latitude" name="latitude" placeholder="Enter latitude" required>
+
+            <label for="longitude">Longitude (Y-coordinate):</label>
+            <input type="text" id="longitude" name="longitude" placeholder="Enter longitude" required>
+
+            <button id="get-location-button">Get Location</button>
+        </section>
+        <section class="prediction-form">
+            <h2>Predict Well</h2>
+            <label for="location">Location Coordinates:</label>
+            <input type="text" id="location" name="location"
+                   placeholder="Enter location coordinates (e.g., 40.7128, -74.0060)" required readonly>
+
+            <button id="predict-button">Predict</button>
+        </section>
+    </div>
+    <section class="prediction-result">
+        <h2>Prediction Result</h2>
+        <p>Well Success Probability: <span id="result-success">-</span></p>
+        <p>Water Level (meters): <span id="result-level">-</span></p>
+        <p>Water Level (feet): <span id="result-level-feet">-</span></p>
+        <p>Water Quality: <span id="result-quality">-</span></p>
+        <p>Drilling Method: <span id="result-method">-</span></p>
+    </section>
+</main>
+<footer>
+    <p>&copy; 2023 Well Prediction App</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
